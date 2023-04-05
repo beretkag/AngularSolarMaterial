@@ -1,0 +1,35 @@
+<h1 mat-dialog-title>
+    {{ dialogTitle }}</h1>
+<div mat-dialog-content>
+    <form [formGroup]="form">
+
+        <mat-form-field appearance="fill">
+            <mat-label>Dátum</mat-label>
+            <input matInput formControlName="datum" [matDatepicker]="datum">
+            <mat-datepicker-toggle matIconSuffix [for]="datum"></mat-datepicker-toggle>
+            <mat-datepicker #datum></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Termelés mennyisége</mat-label>
+            <input matInput formControlName="termeles">
+        </mat-form-field>
+
+
+
+        <mat-form-field appearance="fill">
+            <mat-label>HMKE típusa</mat-label>
+            <mat-select formControlName="HMKE_ID">
+                <mat-option *ngFor="let item of hmke_s" [value]="item.ID">
+                {{item.nev}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </form>
+
+</div>
+<mat-dialog-actions align="end">
+    <button mat-raised-button mat-dialog-close color="primary">Mégse</button>
+    <button mat-raised-button cdkFocusInitial color="warn" (click)="insert()">{{ actionBtn }}</button>
+</mat-dialog-actions>

@@ -1,0 +1,28 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.noresult {
+    padding: 10px;
+    color: red;
+}
