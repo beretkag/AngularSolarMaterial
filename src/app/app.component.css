@@ -26,3 +26,16 @@ table {
     padding: 10px;
     color: red;
 }
+
+.tabel{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabel div:nth-child(1){
+    width: 1000px;
+}
+
+.tabel div:nth-child(2) button{
+    height: 55px;
+}
